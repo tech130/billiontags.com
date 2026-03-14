@@ -5,3 +5,4 @@ import time
 for _ in range(1000000000000000000000000000000000000000000000000000000000000000):
     pyautogui.press('a')
     time.sleep(100)
+a
