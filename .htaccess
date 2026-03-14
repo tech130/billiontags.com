@@ -1,0 +1,66 @@
+############################################
+# ENABLE CACHING
+############################################
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Default fallback
+  ExpiresDefault "access plus 1 month"
+
+  ##################################
+  # HTML (short cache)
+  ##################################
+  ExpiresByType text/html "access plus 1 hour"
+
+  ##################################
+  # IMAGES (1 YEAR)
+  ##################################
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+
+  ##################################
+  # CSS & JS (1 YEAR – VERSIONED ONLY)
+  ##################################
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+
+  ##################################
+  # FONTS (1 YEAR)
+  ##################################
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/ttf "access plus 1 year"
+
+  ##################################
+  # PDF
+  ##################################
+  ExpiresByType application/pdf "access plus 1 year"
+
+</IfModule>
+
+
+############################################
+# CACHE CONTROL HEADERS (IMMUTABLE)
+############################################
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|jpg|jpeg|png|webp|gif|svg|woff|woff2|ttf|pdf)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+
+############################################
+# REMOVE ETAGS (BETTER PERFORMANCE)
+############################################
+
+FileETag None
+
+<IfModule mod_headers.c>
+  Header unset ETag
+</IfModule>

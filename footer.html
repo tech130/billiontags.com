@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        .tag-circle ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tag-circle ul li {
+            display: inline-block;
+            margin: 6px;
+        }
+
+        .tag-circle ul li a {
+            display: inline-block;
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+            border-radius: 50px;
+            text-decoration: none;
+            color: #333;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .site-map {
+            margin-left: 100px
+        }
+
+        .footer-content {
+            max-width: 440px;
+        }
+
+
+        /* Responsive Styles */
+
+        @media (max-width: 1199px) {
+            .site-map {
+                margin-left: 30px !important;
+            }
+
+            .footer-links a {
+                font-size: 12px;
+            }
+
+            .footer-links li {
+                margin-bottom: 0rem;
+            }
+
+            .middle {
+                margin-left: -30px !important;
+            }
+        }
+
+        /* ---- FOOTER RESPONSIVE IMPROVEMENTS ---- */
+        @media (max-width: 991px) {
+            .footer-section {
+                padding: 20px 0px;
+            }
+
+            .site-map {
+                margin-left: 0 !important;
+            }
+
+            .footer-links.site-map {
+                margin-left: 0 !important;
+            }
+
+            .footer-address {
+                text-align: center;
+            }
+
+            .social-icons {
+                justify-content: center !important;
+            }
+
+            .gif-overlay {
+                display: none !important;
+            }
+
+            .footer-logo {
+                margin: 0 auto 1.5rem;
+            }
+
+            .footer-section p {
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 14px;
+            }
+
+            .col-lg-6.col-md-6.mb-4.mb-lg-0 {
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .footer-section .row>div {
+                margin-bottom: 30px;
+            }
+
+            .footer-links li a {
+                font-size: 14px;
+            }
+
+            .footer-copy {
+                font-size: 11px;
+                padding: 0 10px;
+                text-align: center;
+            }
+
+            #video-bg {
+                display: none;
+                /* Video background often problematic on small mobile */
+            }
+
+            .footer-section {
+                background: #dfe2f9;
+                /* Fallback background color */
+            }
+        }
+
+        @media (max-width: 575px) {
+
+            .footer-section p,
+            .footer-address,
+            .footer-links li a {
+                font-size: 13px;
+            }
+
+            .footer-links {
+                padding-right: 0;
+                padding-left: 0 !important;
+            }
+
+            .footer-copy {
+                font-size: 10px;
+                margin-top: 15px;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            .footer-content {
+                max-width: 100%;
+            }
+
+            .middle {
+                margin-left: -60px !important;
+            }
+
+            .last {
+                margin-left: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .social-icons {
+                justify-content: start !important;
+            }
+
+            .middle {
+                margin-left: -20px !important;
+            }
+
+            .last {
+                margin-left: -25px !important;
+            }
+
+            .footer-links li a {
+                font-size: 12px;
+            }
+
+            .fw-bold.mb-2 {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <!-- footer section  -->
+    <section class="footer-section">
+        <!-- Footer Content -->
+        <footer>
+            <div class="footer-container position-relative">
+                <!-- Video Background -->
+                <video autoplay muted loop playsinline id="video-bg">
+                    <source src="https://billiontags-media.s3.ap-south-1.amazonaws.com/img/footer/Footer BG loop.mp4"
+                        type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+
+                <!-- Optional dark overlay for contrast -->
+                <div class="video-overlay"></div>
+
+                <!-- Footer content -->
+                <div class="container-fluid position-relative content-on-video">
+                    <div class="row align-items-start justify-content-between">
+                        <div class="col-lg-3 col-md-12 mb-4 mb-lg-0 text-lg-start text-md-start">
+                            <img src="https://billiontags-media.s3.ap-south-1.amazonaws.com/img/Logo/BILLION TAGS PNG.png" class="footer-logo" id="footer-logo"  alt="Billiontags Logo" />
+                            <p class="mt-2 mb-3 footer-content">
+                                We don’t just reach audiences ,we build bridges of trust and belonging.
+                                Rooted in culture, powered by empathy, and driven by insight, Billiontags creates
+                                campaigns
+                                that touch
+                                lives, inspire loyalty, and celebrate identity.
+                            </p>
+
+
+                        </div>
+                        <!-- Center: Links -->
+                        <div class="col-lg-6 col-md-8 mb-4 mb-lg-0">
+                            <div class="row">
+                                <div class="col-3 col-md-4 mb-3">
+                                    <div class="fw-bold mb-2  site-map">Site Map</div>
+                                    <ul class="footer-links  site-map">
+                                        <li>
+                                            <a href="/">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="/company/">Company</a>
+                                        </li>
+                                        <li>
+                                            <a href="/company/">Platforms</a>
+                                        </li>
+                                        <li>
+                                            <a href="/company/">Channels</a>
+                                        </li>
+                                        <li>
+                                            <a href="/company/">Brands</a>
+                                        </li>
+                                        <li>
+                                            <a href="/company/">Expertise</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="/company/">Company</a>
+                                        </li>
+                                        <li>
+                                            <a href="/blog/">Blogs</a>
+                                        </li>
+                                        <li>
+                                            <a href="/multicultural-moments-map/">Utility</a>
+                                        </li>
+                                        <li>
+                                            <a href="/contact/">Contact</a>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+
+                                <div class="col-7 col-md-4 mb-3 middle">
+                                    <div class="fw-bold mb-2">Services</div>
+                                    <ul class="footer-links">
+                                        <li><a href="/diverse-ethnicities/">Ethnocultural Strategy</a></li>
+                                        <li><a href="/diverse-ethnicities/">Diverse Audience Planning</a></li>
+                                        <li><a href="/diverse-ethnicities/">Creative Development</a></li>
+                                        <li><a href="/diverse-ethnicities/">Multilingual Transcreations</a></li>
+                                        <li><a href="/diverse-ethnicities/">Media Planning & Buying</a></li>
+                                        <li><a href="/diverse-ethnicities/">Campaign Trafficking & Optimization</a></li>
+                                        <li><a href="/diverse-ethnicities/">Data-Driven Analytics & Insights</a></li>
+                                        <li><a href="/diverse-ethnicities/">Influencer Marketing</a></li>
+                                        <li><a href="/diverse-ethnicities/">Multicultural PR</a></li>
+                                        <li><a href="/diverse-ethnicities/">Production</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-3 col-md-4 mb-3 last">
+                                    <div class="fw-bold mb-2">Markets</div>
+                                    <ul class="footer-links">
+                                        <li><a href="/us/">US</a></li>
+                                        <li><a href="/uk/">UK</a></li>
+                                        <li><a href="/uae/">UAE</a></li>
+                                        <li><a href="/canada/">Canada</a></li>
+                                        <li><a href="/australia/">Australia</a></li>
+                                        <li><a href="/new-zealand/">New Zealand</a></li>
+                                        <li><a href="/middle-east/">India</a></li>
+                                        <li><a href="/europe/">Malaysia</a></li>
+                                        <li><a href="/middle-east/">Singapore</a></li>
+                                        <li><a href="/middle-east/">South Africa</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Right: Address and Illustration -->
+                        <div class="col-lg-3 col-md-4 text-lg-start text-center position-relative">
+                            <div class="fw-bold mb-1 text-start">Contact Us</div>
+
+                            <div
+                                class="d-flex justify-content-start align-items-center flex-wrap social-icons blend-multiply">
+
+                                <a href="https://www.facebook.com/billiontags/" class="social-icon"><img src="https://billiontags-media.s3.ap-south-1.amazonaws.com/img/footer/FB.png"  alt="Facebook" /></a>
+                                <a href="https://www.instagram.com/hey.billiontags/" class="social-icon"><img src="https://billiontags-media.s3.ap-south-1.amazonaws.com/img/footer/INSTA.png"  alt="Instagram" /></a>
+                                <a href="https://www.threads.com/@hey.billiontags" class="social-icon"><img src="https://billiontags-media.s3.ap-south-1.amazonaws.com/img/footer/THREADS.png"  alt="Threads" /></a>
+                                <a href="https://www.youtube.com/@Billiontags" class="social-icon"><img src="https://billiontags-media.s3.ap-south-1.amazonaws.com/img/footer/YT.png"  alt="YouTube" /></a>
+                                <a href="https://x.com/billiontags" class="social-icon"><img src="https://billiontags-media.s3.ap-south-1.amazonaws.com/img/footer/X.png"  alt="X" /></a>
+                                <a href="https://www.linkedin.com/company/billiontagsofficial/?viewAsMember=true"
+                                    class="social-icon"><img src="https://billiontags-media.s3.ap-south-1.amazonaws.com/img/footer/LI.png"  alt="LinkedIn" /></a>
+                                <a href="https://www.tiktok.com/@hey.billiontags?is_from_webapp=1&sender_device=pc"
+                                    class="social-icon"><img src="https://billiontags-media.s3.ap-south-1.amazonaws.com/img/footer/TK.png"  alt="TikTok" /></a>
+                            </div>
+                            <div class="col-12 col-md-12 mb-3 tag-circle mt-4 md-mt-0">
+                                <ul class="footer-links">
+                                    <li><a href="#">Neocultural Marketing</a></li>
+                                    <li><a href="#">Diversity Marketing</a></li>
+                                    <li><a href="#">Cricket Advertising</a></li>
+                                    <li><a href="#">Ethnic marketing</a></li>
+                                    <li><a href="#">Multilingual Marketing</a></li>
+                                    <li><a href="#">Cultural Campaigns</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="footer-copy">
+                            © <span style="font-family:Verdana, Geneva, Tahoma, sans-serif ;" id="currentYear"></span>
+                            Billiontags | Your Multicultural Marketing Partner | All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+
+</body>
+
+</html>
