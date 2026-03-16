@@ -1396,6 +1396,7 @@
       opacity: 0.1;
     }
   </style>
+  <script src="/nav.js"></script>
 </head>
 
 <body>
@@ -1417,7 +1418,8 @@
           With Us
         </h1>
       </div>
-      <img src="https://billiontags-media.s3.ap-south-1.amazonaws.com/img/Contact/banner+object+PNG.png" class="foreground-img img-fluid"  alt="Decorative PNG" />
+      <img src="https://billiontags-media.s3.ap-south-1.amazonaws.com/img/Contact/banner+object+PNG.png"
+        class="foreground-img img-fluid" alt="Decorative PNG" />
       <div class="rainbow-ring"></div>
       <div class="rainbow-ring1"></div>
 
@@ -1427,13 +1429,16 @@
     style="min-height: 100vh; overflow: hidden; background-color: #100628;">
     <!-- Background PNG flipped 180deg -->
     <div class="bg-png position-absolute top-0 start-0 w-100 h-100" style="z-index:1; overflow:hidden;">
-      <img src="https://billiontags-media.s3.ap-south-1.amazonaws.com/img/Contact/banner+object+PNG.png" class="img-fluid d-block mx-auto" style="object-fit: cover; transform: rotateX(180deg); max-width: 1000px; width: 100%;" alt="Background">
+      <img src="https://billiontags-media.s3.ap-south-1.amazonaws.com/img/Contact/banner+object+PNG.png"
+        class="img-fluid d-block mx-auto"
+        style="object-fit: cover; transform: rotateX(180deg); max-width: 1000px; width: 100%;" alt="Background">
 
     </div>
 
     <!-- Banner Overlay -->
     <div class="banner-overlay position-absolute top-0 start-0 w-100 h-100" style="z-index:4; overflow:hidden;">
-      <img src="https://billiontags-media.s3.ap-south-1.amazonaws.com/img/Contact/Form+BG.png" class="w-100 h-100 object-fit-cover" style="object-fit: cover; opacity: 1; z-index: 2;" alt="Banner">
+      <img src="https://billiontags-media.s3.ap-south-1.amazonaws.com/img/Contact/Form+BG.png"
+        class="w-100 h-100 object-fit-cover" style="object-fit: cover; opacity: 1; z-index: 2;" alt="Banner">
     </div>
 
     <!-- Form Card -->
@@ -1500,7 +1505,7 @@
         <div class="modal-body">
           <div class="mb-3">
             <div class="icon-gradient mb-3">
-              <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" width="48" height="48"  alt="Success" />
+              <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" width="48" height="48" alt="Success" />
             </div>
             <h5 class="fw-bold gradient-text">Form Submitted!</h5>
             <p class="text-muted mb-4">
@@ -1621,7 +1626,8 @@
       <div class="row align-items-center media-kit-row flex-lg-row">
         <!-- Left image -->
         <div class="col-lg-6 col-md-6 text-center mb-4 mb-lg-0">
-          <img src="https://billiontags-media.s3.ap-south-1.amazonaws.com/img/Contact-Us/Person.png" class="media-img"  alt="Media Kit Visual" />
+          <img src="https://billiontags-media.s3.ap-south-1.amazonaws.com/img/Contact-Us/Person.png" class="media-img"
+            alt="Media Kit Visual" />
         </div>
         <!-- Right form -->
         <div class="col-lg-6 col-md-6 d-flex flex-column align-items-start">
@@ -1718,6 +1724,7 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById("header").innerHTML = data;
+                updateNav(); // auto-injected
 
         // Initialize animated text after header is loaded
         const words = ["SOLVED", "DECODED", "IMPACTED", "MONETIZED"];

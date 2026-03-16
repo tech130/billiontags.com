@@ -325,6 +325,7 @@
     }
 
     .month-heading {
+      font-family: "Nunito", sans-serif;
       text-align: center;
       font-size: 2rem;
       font-weight: 600;
@@ -956,6 +957,7 @@
       }
     }
   </style>
+  <script src="/nav.js"></script>
 </head>
 
 <body>
@@ -2176,6 +2178,7 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById("header").innerHTML = data;
+                updateNav(); // auto-injected
 
 
         /* =========================

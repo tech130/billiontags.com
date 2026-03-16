@@ -1539,6 +1539,7 @@
             text-decoration: none;
         }
     </style>
+  <script src="/nav.js"></script>
 </head>
 
 <body>
@@ -1943,22 +1944,22 @@
                     <div class="header-right">
                         <p>Connecting brands to cultures through intelligent, precise and impactful multicultural
                             marketing.</p>
-                        <button class="btn-white-pill service">Explore All Services</button>
+                        <a href="/multicultural-marketing-services-in-usa/" class="btn-white-pill service">Explore All Services</a>
                     </div>
                 </div>
 
 
 
                 <div class="tags-container">
-                    <a href="service-1.html" class="tag tag-1">Ethnocultural Strategy</a>
-                    <a href="service-2.html" class="tag tag-2">Diverse Audience Planning</a>
-                    <a href="service-3.html" class="tag tag-3">Creative Development</a>
-                    <a href="service-4.html" class="tag tag-4">Multilingual Transcreations</a>
-                    <a href="service-5.html" class="tag tag-5">Media Planning & Buying</a>
-                    <a href="service-6.html" class="tag tag-6">Campaign Trafficking & Optimization</a>
-                    <a href="service-7.html" class="tag tag-7">Data-Driven Analytics & Insights</a>
-                    <a href="service-8.html" class="tag tag-8">Influencer Marketing</a>
-                    <a href="service-9.html" class="tag tag-9">Multicultural PR</a>
+                    <a href="/multicultural-marketing-services-in-usa/ethnocultural-strategist-in-usa/" class="tag tag-1">Ethnocultural Strategy</a>
+                    <a href="/multicultural-marketing-services-in-usa/diverse-audience-planning-in-usa/" class="tag tag-2">Diverse Audience Planning</a>
+                    <a href="/multicultural-marketing-services-in-usa/creative-development-company-in-usa/" class="tag tag-3">Creative Development</a>
+                    <a href="/multicultural-marketing-services-in-usa/multilingual-transcreation-services-company-in-usa/" class="tag tag-4">Multilingual Transcreations</a>
+                    <a href="/multicultural-marketing-services-in-usa/media-Planning-and-buying-company-in-usa/" class="tag tag-5">Media Planning & Buying</a>
+                    <a href="/multicultural-marketing-services-in-usa/campaign-ad-trafficking-and-optimization-company-in-usa/" class="tag tag-6">Campaign Trafficking & Optimization</a>
+                    <a href="/multicultural-marketing-services-in-usa/data-driven-analytics-and-insights-company-in-usa/" class="tag tag-7">Data-Driven Analytics & Insights</a>
+                    <a href="/multicultural-marketing-services-in-usa/influencer-marketing-company-in-usa/" class="tag tag-8">Influencer Marketing</a>
+                    <a href="/multicultural-marketing-services-in-usa/multicultural-pr-company-in-usa/" class="tag tag-9">Multicultural PR</a>
                 </div>
             </div>
         </div>
@@ -2120,6 +2121,7 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById("header").innerHTML = data;
+                updateNav(); // auto-injected
 
                 window.addEventListener("scroll", () => {
                     const navbar = document.querySelector(".navbar");

@@ -1050,6 +1050,7 @@
     }
   </style>
 
+  <script src="/nav.js"></script>
 </head>
 
 <body>
@@ -1147,6 +1148,7 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById("header").innerHTML = data;
+                updateNav(); // auto-injected
 
         // ✅ Add active class to current page link
         const currentPath = window.location.pathname;

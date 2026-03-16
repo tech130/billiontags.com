@@ -2721,6 +2721,7 @@
             }
         }
     </style>
+  <script src="/nav.js"></script>
 </head>
 
 <body>
@@ -3621,6 +3622,7 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById("header").innerHTML = data;
+                updateNav(); // auto-injected
 
                 window.addEventListener("scroll", () => {
                     const navbar = document.querySelector(".navbar");
