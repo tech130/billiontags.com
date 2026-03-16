@@ -3746,6 +3746,7 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById("footer").innerHTML = data;
+        updateNav();
                 // Set the current year for the copyright notice
                 const yearElem = document.getElementById("currentYear");
                 if (yearElem) {

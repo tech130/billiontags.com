@@ -46,6 +46,9 @@ function updateNav() {
     // ─────────────────────────────────────────────
     const path = window.location.pathname;
 
+    // Root path (India) special handling
+    const isRoot = path === '/' || path === '/index.html' || path.toLowerCase().endsWith('/billliontags.com/') || path.toLowerCase().endsWith('/billliontags.com/index.html');
+
     let activeKey = Object.keys(COUNTRIES)
         .sort((a, b) => b.length - a.length)
         .find(c => {
@@ -55,6 +58,8 @@ function updateNav() {
                 || Object.values(SERVICES).some(t => path.includes(t.replace('{c}', c))); // individual service
         });
 
+    if (isRoot) activeKey = 'india';
+
     if (activeKey) {
         // On a country page — save it for later
         localStorage.setItem('bt_country', activeKey);
@@ -63,16 +68,38 @@ function updateNav() {
         const saved = localStorage.getItem('bt_country');
         if (saved && COUNTRIES[saved]) {
             activeKey = saved;
+        } else {
+            activeKey = 'india'; // Default to India
         }
     }
 
-    // No country detected at all — leave nav as default
-    if (!activeKey) return;
+    // ─────────────────────────────────────────────
+    // STEP 1.5 — Track dropdown selection
+    // ─────────────────────────────────────────────
+    // When someone clicks a country, we want to update localStorage immediately
+    document.querySelectorAll('[id^="country-"]').forEach(el => {
+        el.addEventListener('click', () => {
+            const key = el.id.replace('country-', '');
+            if (COUNTRIES[key]) {
+                localStorage.setItem('bt_country', key);
+            }
+        });
+    });
 
     const slug = COUNTRIES[activeKey];
 
     function buildUrl(template, suffix = '') {
+        // India homepage special case
+        if (activeKey === 'india' && template === HOME_FOLDER && !suffix) {
+            return '/';
+        }
         return '/' + template.replace(/\{c\}/g, slug) + '/' + suffix;
+    }
+
+    function buildServiceUrl(template) {
+        const folder = SERVICES_FOLDER.replace(/\{c\}/g, slug);
+        const service = template.replace(/\{c\}/g, slug);
+        return '/' + folder + '/' + service + '/';
     }
 
     // ─────────────────────────────────────────────
@@ -85,16 +112,32 @@ function updateNav() {
 
     // ── Market ──
     const navMarket = document.getElementById('nav-market');
-    if (navMarket) navMarket.href = buildUrl(HOME_FOLDER, MARKET_FOLDER + '/');
+    if (navMarket) {
+        const parentLi = navMarket.closest('li');
+        if (activeKey === 'india') {
+            if (parentLi) parentLi.style.display = 'none';
+            else navMarket.style.display = 'none';
+        } else {
+            if (parentLi) parentLi.style.display = '';
+            navMarket.style.display = '';
+            navMarket.href = buildUrl(HOME_FOLDER, MARKET_FOLDER + '/');
+        }
+    }
 
     // ── Services ──
     const navServices = document.getElementById('nav-services');
     if (navServices) navServices.href = '/' + SERVICES_FOLDER.replace(/\{c\}/g, slug) + '/';
 
-    // ── Individual service dropdown links ──
+    // ── Individual service dropdown links & Footer links ──
     Object.entries(SERVICES).forEach(([id, template]) => {
-        const el = document.getElementById(id);
-        if (el) el.href = buildUrl(template);
+        const fullUrl = buildServiceUrl(template);
+        // Header links
+        const headerEl = document.getElementById(id);
+        if (headerEl) headerEl.href = fullUrl;
+
+        // Footer links
+        const footerEl = document.getElementById('footer-' + id);
+        if (footerEl) footerEl.href = fullUrl;
     });
 
     // ── Pride link ──

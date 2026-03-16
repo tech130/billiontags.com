@@ -1554,8 +1554,8 @@
           strategies that go beyond demographics. Because when your brand speaks the right cultural language,
           everything clicks. </p>
         <div class="hero-buttons animate-fade-up delay-3">
-          <button class="btn btn-primary">Get Started</button>
-          <button class="btn btn-outline">Learn More</button>
+          <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0QDFbA_UN8Oqs2MGQ_cpAb6FoyxDO3mACIvtvxYWjjDAhEWJmP6mvaddBsiksLe0DTDp7Fl3Tr?gv=true" target="_blank" class="btn btn-primary">Get Started</a>
+          <a href="/contact/" class="btn btn-outline">Learn More</a>
         </div>
       </div>
     </div>
@@ -1880,7 +1880,7 @@
           </h2>
           <p>Tell us about your brand and the communities you want to connect with. We'll take it from there.
           </p>
-          <button class="btn-white-pill">Book a Free Discovery Call</button>
+          <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0QDFbA_UN8Oqs2MGQ_cpAb6FoyxDO3mACIvtvxYWjjDAhEWJmP6mvaddBsiksLe0DTDp7Fl3Tr?gv=true" target="_blank" class="btn-white-pill">Book a Free Discovery Call</a>
         </div>
 
         <div class="contact-form-container">
@@ -2147,6 +2147,7 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById("footer").innerHTML = data;
+        updateNav();
         // Set the current year for the copyright notice
         const yearElem = document.getElementById("currentYear");
         if (yearElem) {

@@ -1839,6 +1839,7 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById("footer").innerHTML = data;
+        updateNav();
 
         const logo = document.getElementById("footer-logo");
         if (logo) {
