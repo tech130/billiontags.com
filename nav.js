@@ -53,9 +53,11 @@ function updateNav() {
         .sort((a, b) => b.length - a.length)
         .find(c => {
             const folder = HOME_FOLDER.replace('{c}', c);
+            const genericSuffix = '-in-' + c;
             return path.includes(folder)                          // homepage/subpages
                 || path.includes(SERVICES_FOLDER.replace('{c}', c))  // services page
-                || Object.values(SERVICES).some(t => path.includes(t.replace('{c}', c))); // individual service
+                || Object.values(SERVICES).some(t => path.includes(t.replace('{c}', c))) // individual service
+                || path.includes(genericSuffix); // keyword pages or other custom structures
         });
 
     if (isRoot) activeKey = 'india';
@@ -97,9 +99,8 @@ function updateNav() {
     }
 
     function buildServiceUrl(template) {
-        const folder = SERVICES_FOLDER.replace(/\{c\}/g, slug);
         const service = template.replace(/\{c\}/g, slug);
-        return '/' + folder + '/' + service + '/';
+        return '/' + service + '/';
     }
 
     // ─────────────────────────────────────────────
