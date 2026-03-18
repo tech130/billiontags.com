@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Billiontags Blog | Insights on Multicultural Marketing & Digital Ad Campaigns</title>
   <meta name="description"
-    content="Stay ahead with Billiontags’ blog — your go-to resource for multicultural marketing trends, digital ad campaign strategies, and inclusive growth insights for modern brands." />
+    content="Stay ahead with Billiontagsâ€™ blog â€” your go-to resource for multicultural marketing trends, digital ad campaign strategies, and inclusive growth insights for modern brands." />
   <!-- Canonical -->
   <link rel="canonical" href="https://www.billiontags.com/blog" />
   <!-- Open Graph -->
   <meta property="og:site_name" content="Billiontags" />
   <meta property="og:title" content="Billiontags Blog | Insights on Multicultural Marketing & Digital Ad Campaigns" />
   <meta property="og:description"
-    content="Stay ahead with Billiontags’ blog — your go-to resource for multicultural marketing trends, digital ad campaign strategies, and inclusive growth insights for modern brands." />
+    content="Stay ahead with Billiontagsâ€™ blog â€” your go-to resource for multicultural marketing trends, digital ad campaign strategies, and inclusive growth insights for modern brands." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.billiontags.com/blog" />
   <meta property="og:image"
@@ -23,7 +23,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Billiontags Blog | Insights on Multicultural Marketing & Digital Ad Campaigns" />
   <meta name="twitter:description"
-    content="Stay ahead with Billiontags’ blog — your go-to resource for multicultural marketing trends, digital ad campaign strategies, and inclusive growth insights for modern brands." />
+    content="Stay ahead with Billiontagsâ€™ blog â€” your go-to resource for multicultural marketing trends, digital ad campaign strategies, and inclusive growth insights for modern brands." />
   <meta name="twitter:image"
     content="https://opengraph.b-cdn.net/production/images/e09cb0c8-8385-466d-b716-b489f25262ad.png?token=ISd4LcXLcPdSr__hlsb_Rs15SzYDKWiUG0nJlJoRdAI&height=630&width=1200&expires=33295226435">
 
@@ -34,7 +34,7 @@
     "@type": "Organization",
     "name": "Billiontags",
     "url": "https://www.billiontags.com",
-    "description": "Stay ahead with Billiontags’ blog — your go-to resource for multicultural marketing trends, digital ad campaign strategies, and inclusive growth insights for modern brands.",
+    "description": "Stay ahead with Billiontagsâ€™ blog â€” your go-to resource for multicultural marketing trends, digital ad campaign strategies, and inclusive growth insights for modern brands.",
     "logo": "https://billiontags-media.s3.ap-south-1.amazonaws.com/img/Logo/BILLION TAGS PNG.png",
     "sameAs": [
       "https://www.facebook.com/billiontags",
@@ -776,7 +776,7 @@
     <h2>1. Fenty by Rihanna</h2>
     <p>
       Fenty, founded by music icon Rihanna, has become synonymous with
-      inclusivity and diversity. From the brand’s launch, Fenty Beauty made
+      inclusivity and diversity. From the brandâ€™s launch, Fenty Beauty made
       headlines for offering 40 different shades of foundation, ensuring
       representation for a wide array of skin tones. Rihanna extended this
       ethos to Savage x Fenty, her lingerie line, which features models of all
@@ -788,9 +788,9 @@
     <h2>2. Nike</h2>
     <p>
       Nike has consistently been at the forefront of diversity in fashion and
-      sportswear. The brand’s campaigns have spotlighted athletes and models
-      from various racial and ethnic backgrounds. In 2020, Nike’s “You Can’t
-      Stop Us” campaign featured diverse athletes, including Naomi Osaka,
+      sportswear. The brandâ€™s campaigns have spotlighted athletes and models
+      from various racial and ethnic backgrounds. In 2020, Nikeâ€™s â€œYou Canâ€™t
+      Stop Usâ€ campaign featured diverse athletes, including Naomi Osaka,
       LeBron James, and Colin Kaepernick, highlighting the intersection of
       sport and social justice. Nike has also expanded its offerings to
       include modest sportswear, catering to Muslim women with the Nike Pro
@@ -834,7 +834,7 @@
     <p>
       As consumers demand more inclusivity, these fashion brands are leading
       the charge in celebrating ethnic diversity. Through their collections,
-      campaigns, and corporate initiatives, they’re pushing the industry
+      campaigns, and corporate initiatives, theyâ€™re pushing the industry
       towards a future where every person, regardless of their ethnicity,
       feels seen and represented. This movement is not just a trend but a
       reflection of a changing global landscape where diversity is the
@@ -908,7 +908,7 @@
         document.getElementById("header").innerHTML = data;
                 updateNav(); // auto-injected
 
-        // ✅ Set static navbar logo after header loads
+        // âœ… Set static navbar logo after header loads
         const logo = document.getElementById("navbarLogo");
         if (logo) {
           logo.src = "https://billiontags-media.s3.ap-south-1.amazonaws.com/img/Logo/BILLION TAGS PNG.png";
@@ -1005,7 +1005,407 @@
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RZLK54C" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+  <!-- End Google Tag ManagerÂ (noscript)Â -->
+
+  <!-- Floating CTA Widget -->
+  <div class="orbit-widget" id="orbitWidget">
+
+    <!-- Orbit ring -->
+    <div class="orbit-ring"></div>
+
+    <div class="expand-cta" id="expandCTA">
+      Book Your Free Discovery Call
+    </div>
+
+    <!-- Center Logo -->
+    <div class="center-globe">
+      <img src="https://billiontags-media.s3.ap-south-1.amazonaws.com/img/Logo/infinity.png" alt="Discovery Call">
+    </div>
+
+    <!-- Tooltip -->
+    <div class="tooltip" id="ctaTooltip">Book Your Free Discovery Call</div>
+
+
+  </div>
+
+  <style>
+    /* Smart CTA Expansion */
+    .expand-cta {
+      position: absolute;
+      right: 95px;
+      top: 15px;
+      background: #9221e5;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateX(20px);
+      transition: all .4s ease;
+      pointer-events: none;
+    }
+
+    /* Active expansion */
+    .expand-cta.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+
+
+    /* Hover effect */
+    /* .orbit-widget:hover {
+      transform: scale(1.08);
+    } */
+
+    /* Center globe */
+    .center-globe {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      background-color: transparent;
+      position: relative;
+      z-index: 2;
+    }
+
+    .center-globe img {
+      width: 50px;
+      height: 50px;
+    }
+
+    /* Orbit ring */
+    .orbit-ring {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border: 2px solid #9221e5;
+      border-radius: 50%;
+      top: -10px;
+      left: -10px;
+      transform-style: preserve-3d;
+      animation: orbitRotate 6s linear infinite, glow 2s ease-in-out infinite;
+    }
+
+    /* Glow animation */
+    @keyframes glow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 rgba(146, 33, 229, 0.4);
+      }
+
+      50% {
+        box-shadow: 0 0 14px rgba(146, 33, 229, 0.7);
+      }
+    }
+
+    /* Satellite */
+    .orbit-ring::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #9221e5;
+      border-radius: 50%;
+      top: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* Orbit rotation */
+    @keyframes orbitRotate {
+      from {
+        transform: rotateX(165deg) rotateZ(0deg);
+      }
+
+      to {
+        transform: rotateX(165deg) rotateZ(360deg);
+      }
+    }
+
+    /* Tooltip */
+    .tooltip {
+      position: absolute;
+      right: 95px;
+      top: 15px;
+      background: #9221e5;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: .3s;
+    }
+
+    .orbit-widget {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+      z-index: 9999;
+
+      /* smoother magnetic motion */
+      transition: transform 0.25s ease-out;
+
+      /* better animation performance */
+      will-change: transform;
+
+      /* GPU acceleration */
+      transform: translate3d(0, 0, 0);
+    }
+
+    .orbit-widget:hover .tooltip { opacity: 1 !important; visibility: visible !important; }
+
+    /* Mobile label */
+    .mobile-label {
+      display: none;
+      position: absolute;
+      bottom: -22px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #9221e5;
+      color: white;
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    /* Bounce animation */
+    @keyframes bounceAttention {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      30% {
+        transform: translateY(-8px)
+      }
+
+      50% {
+        transform: translateY(0)
+      }
+
+      70% {
+        transform: translateY(-4px)
+      }
+    }
+
+    /* ================= */
+    /* RESPONSIVE DESIGN */
+    /* ================= */
+
+    @media (max-width:1024px) {
+
+      .orbit-widget {
+        width: 70px;
+        height: 70px;
+      }
+
+      .center-globe {
+        width: 60px;
+        height: 60px;
+      }
+
+      .center-globe img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .orbit-ring {
+        width: 80px;
+        height: 80px;
+      }
+
+    }
+
+    @media (max-width:768px) {
+
+      .orbit-widget {
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .center-globe {
+        width: 50px;
+        height: 50px;
+      }
+
+      .center-globe img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .orbit-ring {
+        width: 70px;
+        height: 70px;
+      }
+
+      .tooltip {
+        display: none;
+      }
+
+      .mobile-label {
+        display: block;
+      }
+
+    }
+
+    @media (max-width:480px) {
+
+      .orbit-widget {
+        width: 55px;
+        height: 55px;
+      }
+
+      .center-globe {
+        width: 45px;
+        height: 45px;
+      }
+
+      .center-globe img {
+        width: 34px;
+        height: 34px;
+      }
+
+      .orbit-ring {
+        width: 65px;
+        height: 65px;
+      }
+
+    }
+
+    .bounce {
+      animation: bounceAttention 0.9s ease;
+    }
+
+    /* Exit Intent Orbital Pulse */
+
+    @keyframes exitPulse {
+
+      0% {
+        transform: scale(1);
+      }
+
+      40% {
+        transform: scale(1.25);
+      }
+
+      60% {
+        transform: scale(1.18);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+
+    }
+
+    /* Stronger glow */
+    .exit-intent-active .orbit-ring {
+      box-shadow: 0 0 25px rgba(146, 33, 229, 0.9);
+      border-color: #b24cff;
+    }
+
+    /* Widget expansion */
+    .exit-intent-active {
+      animation: exitPulse 1.2s ease;
+    }
+  </style>
+
+  <script>
+    (function() {
+      const widget = document.getElementById("orbitWidget");
+      if (!widget) return;
+      
+      const tooltip = document.getElementById("ctaTooltip");
+      const expandCTA = document.getElementById("expandCTA");
+      
+      widget.onclick = function () {
+        window.open(
+          "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0QDFbA_UN8Oqs2MGQ_cpAb6FoyxDO3mACIvtvxYWjjDAhEWJmP6mvaddBsiksLe0DTDp7Fl3Tr?gv=true",
+          "_blank"
+        );
+      };
+
+      function triggerBounce() {
+        widget.classList.add("bounce");
+        setTimeout(() => {
+          widget.classList.remove("bounce");
+        }, 900);
+      }
+
+      setTimeout(triggerBounce, 10000);
+      setInterval(triggerBounce, 20000);
+
+      setTimeout(() => {
+        if (tooltip) tooltip.style.opacity = "1";
+        setTimeout(() => {
+          if (tooltip) tooltip.style.opacity = "0";
+        }, 4000);
+      }, 6000);
+
+      document.addEventListener("mousemove", function (e) {
+        const rect = widget.getBoundingClientRect();
+        const widgetCenterX = rect.left + rect.width / 2;
+        const widgetCenterY = rect.top + rect.height / 2;
+        const distanceX = e.clientX - widgetCenterX;
+        const distanceY = e.clientY - widgetCenterY;
+        const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+        const magnetArea = 120;
+
+        if (distance < magnetArea) {
+          const moveX = distanceX * 0.15;
+          const moveY = distanceY * 0.15;
+          widget.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        } else {
+          widget.style.transform = "translate(0,0)";
+        }
+      });
+
+      let expandedOnce = false;
+      window.addEventListener("scroll", () => {
+        const scrollPosition = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+        const winHeight = window.innerHeight;
+        const pageHeight = docHeight - winHeight;
+        if (pageHeight <= 0) return;
+        const scrollPercent = scrollPosition / pageHeight;
+
+        if (scrollPercent > 0.5 && !expandedOnce) {
+          expandedOnce = true;
+          if (expandCTA) expandCTA.classList.add("show");
+          setTimeout(() => {
+            if (expandCTA) expandCTA.classList.remove("show");
+          }, 4000);
+        }
+      });
+
+      let exitIntentTriggered = false;
+      document.addEventListener("mousemove", function (e) {
+        if (e.clientY < 20 && !exitIntentTriggered) {
+          exitIntentTriggered = true;
+          widget.classList.add("exit-intent-active");
+          if (expandCTA) expandCTA.classList.add("show");
+          setTimeout(() => {
+            widget.classList.remove("exit-intent-active");
+            if (expandCTA) expandCTA.classList.remove("show");
+          }, 4000);
+        }
+      });
+    })();
+  </script>
+
 </body>
 
 </html>

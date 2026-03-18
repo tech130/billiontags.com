@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -558,12 +558,12 @@
             background: #f5f6fa;
         }
 
-        /* Title design image – small variant */
+        /* Title design image â€“ small variant */
         .title-img-sm {
             width: 120px !important;
         }
 
-        /* Legend container – centered with max width */
+        /* Legend container â€“ centered with max width */
         .legend-container {
             max-width: 900px;
             margin: 0 auto;
@@ -622,7 +622,7 @@
             padding: 20px;
         }
 
-        /* Platform logo images – multiple height variants */
+        /* Platform logo images â€“ multiple height variants */
         .platform-img {
             max-height: 40px;
             max-width: 100%;
@@ -1716,7 +1716,7 @@
                 downloadForm.email.focus();
                 return;
             }
-            // ✅ Correct format for Google Sheets
+            // âœ… Correct format for Google Sheets
             const formData = new FormData();
             formData.append("name", name);
             formData.append("email", email);
@@ -1895,7 +1895,7 @@
                 const gap = parseInt(getComputedStyle(row).gap) || 20;
                 return card.offsetWidth + gap;
             }
-            /* 🔁 Clone first & last card for seamless loop */
+            /* ðŸ” Clone first & last card for seamless loop */
             const firstClone = cards[0].cloneNode(true);
             const lastClone = cards[cards.length - 1].cloneNode(true);
             row.appendChild(firstClone);
@@ -1941,7 +1941,407 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RZLK54C" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <!-- End Google Tag ManagerÂ (noscript)Â -->
+
+  <!-- Floating CTA Widget -->
+  <div class="orbit-widget" id="orbitWidget">
+
+    <!-- Orbit ring -->
+    <div class="orbit-ring"></div>
+
+    <div class="expand-cta" id="expandCTA">
+      Book Your Free Discovery Call
+    </div>
+
+    <!-- Center Logo -->
+    <div class="center-globe">
+      <img src="https://billiontags-media.s3.ap-south-1.amazonaws.com/img/Logo/infinity.png" alt="Discovery Call">
+    </div>
+
+    <!-- Tooltip -->
+    <div class="tooltip" id="ctaTooltip">Book Your Free Discovery Call</div>
+
+
+  </div>
+
+  <style>
+    /* Smart CTA Expansion */
+    .expand-cta {
+      position: absolute;
+      right: 95px;
+      top: 15px;
+      background: #9221e5;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateX(20px);
+      transition: all .4s ease;
+      pointer-events: none;
+    }
+
+    /* Active expansion */
+    .expand-cta.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+
+
+    /* Hover effect */
+    /* .orbit-widget:hover {
+      transform: scale(1.08);
+    } */
+
+    /* Center globe */
+    .center-globe {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      background-color: transparent;
+      position: relative;
+      z-index: 2;
+    }
+
+    .center-globe img {
+      width: 50px;
+      height: 50px;
+    }
+
+    /* Orbit ring */
+    .orbit-ring {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border: 2px solid #9221e5;
+      border-radius: 50%;
+      top: -10px;
+      left: -10px;
+      transform-style: preserve-3d;
+      animation: orbitRotate 6s linear infinite, glow 2s ease-in-out infinite;
+    }
+
+    /* Glow animation */
+    @keyframes glow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 rgba(146, 33, 229, 0.4);
+      }
+
+      50% {
+        box-shadow: 0 0 14px rgba(146, 33, 229, 0.7);
+      }
+    }
+
+    /* Satellite */
+    .orbit-ring::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #9221e5;
+      border-radius: 50%;
+      top: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* Orbit rotation */
+    @keyframes orbitRotate {
+      from {
+        transform: rotateX(165deg) rotateZ(0deg);
+      }
+
+      to {
+        transform: rotateX(165deg) rotateZ(360deg);
+      }
+    }
+
+    /* Tooltip */
+    .tooltip {
+      position: absolute;
+      right: 95px;
+      top: 15px;
+      background: #9221e5;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: .3s;
+    }
+
+    .orbit-widget {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 80px;
+      height: 80px;
+      cursor: pointer;
+      z-index: 9999;
+
+      /* smoother magnetic motion */
+      transition: transform 0.25s ease-out;
+
+      /* better animation performance */
+      will-change: transform;
+
+      /* GPU acceleration */
+      transform: translate3d(0, 0, 0);
+    }
+
+    .orbit-widget:hover .tooltip { opacity: 1 !important; visibility: visible !important; }
+
+    /* Mobile label */
+    .mobile-label {
+      display: none;
+      position: absolute;
+      bottom: -22px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #9221e5;
+      color: white;
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    /* Bounce animation */
+    @keyframes bounceAttention {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      30% {
+        transform: translateY(-8px)
+      }
+
+      50% {
+        transform: translateY(0)
+      }
+
+      70% {
+        transform: translateY(-4px)
+      }
+    }
+
+    /* ================= */
+    /* RESPONSIVE DESIGN */
+    /* ================= */
+
+    @media (max-width:1024px) {
+
+      .orbit-widget {
+        width: 70px;
+        height: 70px;
+      }
+
+      .center-globe {
+        width: 60px;
+        height: 60px;
+      }
+
+      .center-globe img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .orbit-ring {
+        width: 80px;
+        height: 80px;
+      }
+
+    }
+
+    @media (max-width:768px) {
+
+      .orbit-widget {
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .center-globe {
+        width: 50px;
+        height: 50px;
+      }
+
+      .center-globe img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .orbit-ring {
+        width: 70px;
+        height: 70px;
+      }
+
+      .tooltip {
+        display: none;
+      }
+
+      .mobile-label {
+        display: block;
+      }
+
+    }
+
+    @media (max-width:480px) {
+
+      .orbit-widget {
+        width: 55px;
+        height: 55px;
+      }
+
+      .center-globe {
+        width: 45px;
+        height: 45px;
+      }
+
+      .center-globe img {
+        width: 34px;
+        height: 34px;
+      }
+
+      .orbit-ring {
+        width: 65px;
+        height: 65px;
+      }
+
+    }
+
+    .bounce {
+      animation: bounceAttention 0.9s ease;
+    }
+
+    /* Exit Intent Orbital Pulse */
+
+    @keyframes exitPulse {
+
+      0% {
+        transform: scale(1);
+      }
+
+      40% {
+        transform: scale(1.25);
+      }
+
+      60% {
+        transform: scale(1.18);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+
+    }
+
+    /* Stronger glow */
+    .exit-intent-active .orbit-ring {
+      box-shadow: 0 0 25px rgba(146, 33, 229, 0.9);
+      border-color: #b24cff;
+    }
+
+    /* Widget expansion */
+    .exit-intent-active {
+      animation: exitPulse 1.2s ease;
+    }
+  </style>
+
+  <script>
+    (function() {
+      const widget = document.getElementById("orbitWidget");
+      if (!widget) return;
+      
+      const tooltip = document.getElementById("ctaTooltip");
+      const expandCTA = document.getElementById("expandCTA");
+      
+      widget.onclick = function () {
+        window.open(
+          "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0QDFbA_UN8Oqs2MGQ_cpAb6FoyxDO3mACIvtvxYWjjDAhEWJmP6mvaddBsiksLe0DTDp7Fl3Tr?gv=true",
+          "_blank"
+        );
+      };
+
+      function triggerBounce() {
+        widget.classList.add("bounce");
+        setTimeout(() => {
+          widget.classList.remove("bounce");
+        }, 900);
+      }
+
+      setTimeout(triggerBounce, 10000);
+      setInterval(triggerBounce, 20000);
+
+      setTimeout(() => {
+        if (tooltip) tooltip.style.opacity = "1";
+        setTimeout(() => {
+          if (tooltip) tooltip.style.opacity = "0";
+        }, 4000);
+      }, 6000);
+
+      document.addEventListener("mousemove", function (e) {
+        const rect = widget.getBoundingClientRect();
+        const widgetCenterX = rect.left + rect.width / 2;
+        const widgetCenterY = rect.top + rect.height / 2;
+        const distanceX = e.clientX - widgetCenterX;
+        const distanceY = e.clientY - widgetCenterY;
+        const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+        const magnetArea = 120;
+
+        if (distance < magnetArea) {
+          const moveX = distanceX * 0.15;
+          const moveY = distanceY * 0.15;
+          widget.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        } else {
+          widget.style.transform = "translate(0,0)";
+        }
+      });
+
+      let expandedOnce = false;
+      window.addEventListener("scroll", () => {
+        const scrollPosition = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+        const winHeight = window.innerHeight;
+        const pageHeight = docHeight - winHeight;
+        if (pageHeight <= 0) return;
+        const scrollPercent = scrollPosition / pageHeight;
+
+        if (scrollPercent > 0.5 && !expandedOnce) {
+          expandedOnce = true;
+          if (expandCTA) expandCTA.classList.add("show");
+          setTimeout(() => {
+            if (expandCTA) expandCTA.classList.remove("show");
+          }, 4000);
+        }
+      });
+
+      let exitIntentTriggered = false;
+      document.addEventListener("mousemove", function (e) {
+        if (e.clientY < 20 && !exitIntentTriggered) {
+          exitIntentTriggered = true;
+          widget.classList.add("exit-intent-active");
+          if (expandCTA) expandCTA.classList.add("show");
+          setTimeout(() => {
+            widget.classList.remove("exit-intent-active");
+            if (expandCTA) expandCTA.classList.remove("show");
+          }, 4000);
+        }
+      });
+    })();
+  </script>
+
 </body>
 
 </html>
