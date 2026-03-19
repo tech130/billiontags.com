@@ -6,11 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-    .nav-button a {
-        text-decoration: none;
-    }
-</style>
+    <style>
+        .nav-button a {
+            text-decoration: none;
+        }
+
+        /* Custom Hamburger breakpoint for 1024px */
+        @media (max-width: 1024px) {
+            .navbar-expand-lg .navbar-collapse {
+                display: none !important;
+                flex-basis: 100%;
+                flex-grow: 1;
+                align-items: center;
+            }
+
+            .navbar-expand-lg .navbar-toggler {
+                display: block !important;
+            }
+
+            .navbar-expand-lg .navbar-collapse.show {
+                display: block !important;
+            }
+
+            .navbar-expand-lg .navbar-nav {
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+
+            .navbar-expand-lg .demo-button {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                display: flex;
+            }
+
+            .navbar-expand-lg .nav-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark px-1 fixed-top">
