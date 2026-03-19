@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="https://billiontags-media.s3.ap-south-1.amazonaws.com/img/Logo/infinity.png"
+    type="image/x-icon" />
+
+  <title>Billiontags | Creators</title>
+  <meta name="description"
+    content="Billiontags is a multicultural marketing company. This form helps us understand your creator profile, audience, and content category." />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Billiontags",
+    "url": "https://www.billiontags.com",
+    "description": "Multicultural marketing company connecting international brands with global audiences.",
+    "logo": "https://billiontags-media.s3.ap-south-1.amazonaws.com/img/Logo/BILLION TAGS PNG.png"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color: #04061d;
+      color: #fff;
+    }
+
+    /* --- NAVBAR STYLES --- */
+    .navbar {
+      background: #fff !important;
+      box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.12);
+      transition: background 0.3s, box-shadow 0.3s;
+      z-index: 99999;
+    }
+
+
+    .navbar .nav-link {
+      color: #111 !important;
+      transition: color 0.2s;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .navbar .nav-link.active {
+      color: #9221e5 !important;
+    }
+
+    .navbar .nav-link:not(.active):hover {
+      color: #9221e5 !important;
+    }
+
+    .navbar .dropdown-toggle::after {
+      display: none !important;
+    }
+
+    /* --- SCROLLED STATE --- */
+    .navbar.scrolled {
+      background: #fff !important;
+      box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    .navbar.scrolled .nav-link {
+      color: #111 !important;
+    }
+
+    .navbar.scrolled .nav-link.active {
+      color: #9221e5 !important;
+    }
+
+    .navbar.scrolled .nav-link:not(.active):hover {
+      color: #9221e5 !important;
+    }
+
+    .dropdown-menu {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: none;
+      min-width: 120px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .dropdown-item {
+      color: #000;
+      font-size: 13px;
+      font-weight: 500;
+      transition: background 0.15s, color 0.15s;
+      cursor: pointer;
+    }
+
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+      background: #9221e5;
+      color: #fff;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280,0,0,0.85%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 2rem;
+      letter-spacing: -1px;
+      transition: all 0.3s ease;
+      color: #fff !important;
+    }
+
+    .navbar.scrolled .navbar-brand {
+      color: #111 !important;
+    }
+
+    .navbar-brand img {
+      height: 25px;
+      width: auto;
+      margin-right: 8px;
+      margin-top: -3px;
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 991px) {
+      .navbar-brand {
+        font-size: 1.5rem;
+      }
+
+      .navbar .navbar-collapse {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .navbar-brand {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (min-width: 1025px) {
+
+      .navbar .dropdown:hover>.dropdown-menu,
+      .navbar .dropdown-menu:hover {
+        display: block;
+      }
+    }
+
+    /* Contact Details Section Layout constraints */
+    .contact-section {
+      min-height: 100vh;
+      overflow: hidden;
+      background-color: #100628;
+    }
+
+    .form-card {
+      background: rgba(24, 8, 40, 0.35);
+      box-shadow: 0 0 50px 15px rgba(80, 0, 160, 0.3);
+      backdrop-filter: blur(20px);
+      border: 1px solid #e0c6ff66;
+    }
+
+    .form-control.custom-input,
+    .form-select.custom-input {
+      background-color: transparent !important;
+      color: #fff !important;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 6px;
+      box-shadow: none;
+    }
+
+    .form-control.custom-input:focus,
+    .form-select.custom-input:focus {
+      background-color: rgba(10, 9, 10, 0.9) !important;
+      color: #fff;
+      outline: none;
+      box-shadow: 0 0 8px #B63BD3;
+      border-color: #B63BD3;
+    }
+
+    .form-control.custom-input::placeholder {
+      color: #ddd;
+      opacity: 0.4;
+    }
+
+    .brand-select option {
+      background-color: #100628;
+      color: #fff;
+    }
+
+    /* Additional checkboxes styling */
+    .form-check-label {
+      color: #fff;
+    }
+
+    .form-check-input:checked {
+      background-color: #B63BD3;
+      border-color: #B63BD3;
+    }
+
+    .hero-header {
+      background: url('https://billiontags-media.s3.ap-south-1.amazonaws.com/img/Contact/Form+BG.png') center cover no-repeat;
+      min-height: 250px;
+    }
+
+    /* Floating label styles from influencer-marketing */
+    .brand-field {
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+      margin-bottom: 20px;
+    }
+
+    .brand-field label {
+      position: absolute;
+      top: 14px;
+      left: 16px;
+      font-size: 0.82rem;
+      color: #fff;
+      pointer-events: none;
+      transition: top 0.2s, font-size 0.2s, color 0.2s;
+      z-index: 1;
+    }
+
+    .brand-input,
+    .brand-select {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.04) !important;
+      border: 1px solid #fff !important;
+      border-radius: 10px !important;
+      padding: 28px 16px 6px !important;
+      font-size: 1rem !important;
+      font-weight: 500 !important;
+      color: #ffffff !important;
+      outline: none;
+      transition: border-color 0.25s, background 0.25s;
+      appearance: none;
+      -webkit-appearance: none;
+      box-shadow: none !important;
+    }
+
+
+
+    .brand-select {
+      color: rgba(255, 255, 255, 0);
+      cursor: pointer;
+    }
+
+    .brand-select.countryCode {
+      text-align: center;
+      text-align-last: center;
+    }
+
+    .brand-select.has-value,
+    .brand-select.selected-value {
+      color: #ffffff !important;
+    }
+
+    .brand-input:focus,
+    .brand-select:focus {
+      border-color: rgba(157, 110, 255, 0.6) !important;
+      background: rgba(108, 63, 224, 0.08) !important;
+    }
+
+    .brand-input:focus~label,
+    .brand-input:not(:placeholder-shown)~label,
+    .brand-select-wrap:focus-within~label,
+    .brand-select.has-value~label,
+    .brand-select.has-value+label {
+      top: 6px !important;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #8d5cd9 !important;
+    }
+
+    .brand-select-wrap {
+      position: relative;
+    }
+
+    .brand-select-wrap::after {
+      content: '';
+      position: absolute;
+      right: 16px;
+      top: 65%;
+      transform: translateY(-50%);
+      width: 100%;
+      max-width: 10px;
+      height: 6px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='rgba(255,255,255,0.45)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center;
+      pointer-events: none;
+    }
+
+    .mediapind-logo-link {
+      display: inline-block;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      background: transparent !important;
+      border: none !important;
+    }
+
+    .mediapind-logo-link:hover {
+      transform: scale(1.05);
+      filter: brightness(1.2);
+    }
+
+
+    .blend-multiply {
+      mix-blend-mode: multiply;
+    }
+
+    #video-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      mix-blend-mode: lighten;
+      z-index: 0;
+    }
+
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.5;
+      z-index: 1;
+    }
+
+    .content-on-video {
+      position: relative;
+
+      z-index: 2;
+    }
+
+    /* footer style  */
+    #video-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 105%;
+      object-fit: cover;
+      mix-blend-mode: lighten;
+      z-index: 0;
+      margin-top: -1.9rem;
+    }
+
+    .content-on-video {
+      position: relative;
+      z-index: 2;
+    }
+
+    .blend-multiply {
+      mix-blend-mode: multiply;
+    }
+
+    /* Footer Section Background and Spacing */
+    .footer-section {
+      background: #dfe2f9;
+      /* overflow: visible; */
+      padding: 10px;
+      color: #222;
+      padding-top: 2rem;
+    }
+
+    /* Logo */
+    .footer-logo {
+      width: 120px;
+      margin-bottom: 1.2rem;
+    }
+
+    /* Tagline Paragraph */
+    .footer-section p {
+      font-size: 15px;
+      color: #222;
+      margin-bottom: 2.5rem;
+      font-weight: 500;
+    }
+
+    .social-icons {
+      gap: -10rem;
+    }
+
+    .social-icon {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      transition: transform 0.2s;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.1);
+    }
+
+    .social-icon img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .social-icons a:last-child {
+      margin-right: 0;
+    }
+
+    /* Footer Links */
+    .footer-links {
+      list-style: none;
+      padding-left: 0px;
+      margin-bottom: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links a {
+      color: #222;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #9221e5;
+    }
+
+    /* Section Titles (Markets, Audiences, Address) */
+    .footer-section .fw-bold,
+    .footer-section strong {
+      font-weight: 700 !important;
+    }
+
+    /* Address Block */
+    .footer-address {
+      font-size: 15px;
+      margin-bottom: 1.5rem;
+      color: #222;
+      text-align: left;
+    }
+
+    /* Copyright */
+    .footer-copy {
+      font-size: 12px;
+      color: #888;
+      text-align: center;
+    }
+
+    .col-lg-6.col-md-6.mb-4.mb-lg-0 {
+      padding: 0px 120px;
+    }
+
+    .gif-overlay {
+      position: absolute;
+      top: 200px;
+      left: -20%;
+      width: 100%;
+      height: 90%;
+      z-index: 1;
+      /* Behind the content */
+      pointer-events: none;
+      /* So clicks pass through */
+      opacity: 1;
+      /* Adjust transparency */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      order: 2;
+    }
+
+    .gif-overlay img {
+      max-width: 400px;
+      /* Adjust size as needed */
+      max-height: 400px;
+    }
+
+    /* Responsive Styles */
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      .footer-section {
+        text-align: start;
+      }
+
+      .footer-address {
+        text-align: start;
+      }
+
+      .gif-overlay {
+        left: -28%;
+      }
+
+      .col-lg-6.col-md-6.mb-4.mb-lg-0 {
+        padding: 0px 50px;
+      }
+    }
+
+    @media (max-width: 769px) {
+      .footer-section {
+        padding: 30px 0px;
+      }
+
+      .footer-logo {
+        width: 120px;
+      }
+
+      .col-lg-6.col-md-6.mb-4.mb-lg-0 {
+        padding: 0px 50px;
+      }
+
+      .footer-section p,
+      .footer-address,
+      .footer-links li a {
+        font-size: 12px;
+      }
+
+      .footer-links li {
+        margin-bottom: 0;
+      }
+
+      .gif-overlay {
+        left: -36%;
+        top: 150px;
+      }
+
+      .gif-overlay img {
+        max-width: 330px;
+      }
+
+      .social-icon {
+        width: 20px;
+        height: 25px;
+      }
+
+      .social-icon img {
+        width: 20px;
+        height: 20px;
+      }
+
+      .footer-copy {
+        margin-bottom: 10px;
+      }
+    }
+
+    @media (max-width: 575px) {
+
+      .footer-section p,
+      .footer-address,
+      .footer-links li a {
+        font-size: 13px;
+      }
+
+      .footer-links {
+        padding-right: 20px;
+        padding-left: 0 !important;
+      }
+
+      .footer-copy {
+        font-size: 8px;
+        margin-bottom: 10px;
+      }
+
+      .col-lg-6.col-md-6.mb-4.mb-lg-0 {
+        padding: 0px 20px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* .footer-address {
+        order: 1;
+      } */
+
+    @media (max-width: 767.98px) {
+      .footer-address {
+        order: 2;
+      }
+
+      .gif-overlay {
+        order: 1;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .gif-overlay {
+        display: none;
+      }
+
+      .cta-section {
+        padding: 50px 0px 100px;
+      }
+
+      .media-kit {
+        margin-bottom: 1rem !important;
+      }
+    }
+
+
+    .navbar2 {
+
+      /* padding: 0px -15px; */
+      color: rgb(16, 16, 16);
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center b;
+
+    }
+
+    .navbar2 .constant {
+      margin-right: 5px;
+      color: rgb(15, 15, 15);
+      font-weight: 600;
+
+    }
+
+    .navbar2 .animated-text {
+
+      white-space: nowrap;
+      overflow: visible;
+      width: 200px;
+      /* Adjust width as needed */
+      color: #9221e5;
+    }
+
+    @media (max-width: 575px) {
+      .navbar2 {
+        padding: -15px;
+        margin-left: -10%;
+      }
+
+      .navbar2 .animated-text {
+        width: 40px;
+        font-size: 10px;
+      }
+
+      .navbar2 .constant {
+        font-size: 10px;
+      }
+
+      .navbar-toggler .navbar-toggler-icon {
+        padding: 4px 10px !important;
+        width: 10px;
+
+      }
+    }
+
+    .nav-button {
+
+      position: relative;
+      padding: 2px 13px;
+      font-size: 1rem;
+      font-weight: 600;
+      background: transparent;
+      border: 2px solid #9221E5;
+      border-radius: 15px;
+      cursor: pointer;
+      overflow: hidden;
+      transition: color 0.4s ease;
+      z-index: 0;
+
+
+
+    }
+
+    /* Animated background fill */
+    .nav-button::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* background: linear-gradient(45deg, #ffcc00, #ffaa00); */
+      transition: top 0.4s ease;
+      z-index: -1;
+      border-radius: 5px;
+    }
+
+    /* On hover, slide the background fill up */
+    .nav-button:hover::before {
+      top: 0;
+    }
+
+    /* Change text color on hover */
+    .nav-button:hover {
+      color: #111;
+    }
+
+    .nav-button:hover {
+      animation: glowPulse 2s infinite;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+
+      .nav-button {
+        width: 100%;
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 0rem 0;
+      }
+
+      .demo-button {
+        display: flex;
+        gap: 20px;
+      }
+    }
+  </style>
+  <script src="/nav.js"></script>
+</head>
+
+<body>
+
+  <div id="header"></div>
+
+  <!-- Form Section -->
+  <section class="contact-section position-relative d-flex align-items-center justify-content-center py-5">
+
+    <!-- Banner Overlay -->
+    <div class="banner-overlay position-absolute top-0 start-0 w-100 h-100" style="z-index:2; overflow:hidden;">
+      <img src="https://billiontags-media.s3.ap-south-1.amazonaws.com/img/Contact/Form+BG.png"
+        class="w-100 h-100 object-fit-cover" style="object-fit: cover; opacity: 1;" alt="Banner">
+    </div>
+
+    <!-- Form Card -->
+    <div class="container position-relative" style="z-index:4; max-width: 900px;">
+
+      <!-- Moved Hero Header into Form Section -->
+      <div class="text-center mb-4 mb-md-5 mt-4">
+        <h1 class="fw-bold text-white mb-3" style="font-size: clamp(2rem, 8vw, 3.5rem); letter-spacing: 1px;">Join As
+          Influencer</h1>
+        <p class="text-white mx-auto mb-4"
+          style="max-width: 800px; font-size: clamp(0.95rem, 3vw, 1.15rem); line-height: 1.6; opacity: 0.9;">
+          Are You an Ethnic Creator? <br class="d-none d-md-block">
+          We'd love to have you. Let's make magic with brands you believe in.
+        </p>
+        <div class="mt-4 mb-2">
+          <div class="d-inline-block px-3 py-1 mb-3 rounded-pill">
+            <span class="small text-white opacity-75 fw-bold"
+              style="letter-spacing: 1px; text-transform: uppercase; font-size: 0.75rem;">
+              the Influencer Platform
+            </span>
+          </div>
+          <div class="mb-3">
+            <div class="mediapind-logo-link">
+              <img src="/creators/image 1761.png" alt="Media Pind Logo"
+                style="width: 100%; max-width: 280px; height: auto;">
+            </div>
+          </div>
+          <p class="text-white-50 small mt-2">
+            Powered by Billiontags
+          </p>
+        </div>
+
+      </div>
+
+      <div class="form-card rounded-4 p-3 p-sm-4 p-md-5 mx-auto mt-4 mb-4">
+        <!-- 
+        <div class="text-center mb-5">
+          <h2 class="fw-bold text-white">
+            Influencer Partnership Form
+          </h2>
+        </div> -->
+
+        <form id="influencerForm">
+          <div class="row g-4">
+
+            <!-- 1. Full Name -->
+            <div class="col-md-6">
+              <div class="brand-field">
+                <input type="text" class="brand-input" id="fullName" name="fullName" placeholder=" " required>
+                <label for="fullName">Full Name *</label>
+              </div>
+            </div>
+
+            <!-- 2. Email Address -->
+            <div class="col-md-6">
+              <div class="brand-field">
+                <input type="email" class="brand-input" id="email" name="email" placeholder=" " required>
+                <label for="email">Email Address *</label>
+              </div>
+            </div>
+
+            <!-- 3. Phone Number -->
+            <div class="col-md-6">
+              <div class="brand-field">
+                <div class="input-group">
+                  <div class="brand-select-wrap" style="width: 130px;">
+                    <select class="brand-select countryCode" id="countryCode" name="countryCode" required
+                      style="border-top-right-radius: 0 !important; border-bottom-right-radius: 0 !important;text-align: start;text-align-last: start;">
+                      <option value="+1" selected>+1 (US)</option>
+                      <option value="+1">+1 (CA)</option>
+                      <option value="+44">+44 (UK)</option>
+                      <option value="+91">+91 (IN)</option>
+                      <option value="+61">+61 (AU)</option>
+                      <option value="+971">+971 (UAE)</option>
+                      <option value="+65">+65 (SG)</option>
+                      <option value="+60">+60 (MY)</option>
+                      <option value="+27">+27 (ZA)</option>
+                      <option value="+64">+64 (NZ)</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <input type="tel" class="brand-input "
+                    style="flex: 1; border-top-left-radius: 0 !important; border-bottom-left-radius: 0 !important; border-left: 0 !important; padding-top: 22px !important;"
+                    id="phone" name="phone" placeholder=" " required>
+                </div>
+                <label for="phone" style="top: -20px; font-size: 0.82rem; left: 0; position: absolute;">WhatsApp Number
+                  *</label>
+              </div>
+            </div>
+
+            <!-- 4. Country of Origin -->
+            <div class="col-md-6">
+              <div class="brand-field">
+                <input type="text" class="brand-input" id="countryOrigin" name="countryOrigin" placeholder=" ">
+                <label for="countryOrigin">Country of Origin / Heritage</label>
+              </div>
+            </div>
+
+            <!-- 5. Current Location -->
+            <div class="col-md-12">
+              <div class="brand-field">
+                <input type="text" class="brand-input" id="currentLocation" name="currentLocation" placeholder=" "
+                  required>
+                <label for="currentLocation">Current Location (City & Country) *</label>
+              </div>
+            </div>
+
+            <!-- Social Media Profile Links -->
+            <div class="col-12 mt-4">
+              <label class="form-label d-block text-light mb-2">Active Social Media Platforms *</label>
+              <div class="d-flex flex-wrap gap-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Instagram" id="platformInsta" name="platforms">
+                  <label class="form-check-label" for="platformInsta">Instagram</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Youtube" id="platformYt" name="platforms">
+                  <label class="form-check-label" for="platformYt">Youtube</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Facebook" id="platformFb" name="platforms">
+                  <label class="form-check-label" for="platformFb">Facebook</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="TikTok" id="platformTiktok" name="platforms">
+                  <label class="form-check-label" for="platformTiktok">TikTok</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="All the above" id="platformAll"
+                    name="platforms">
+                  <label class="form-check-label" for="platformAll">All the above</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 mt-4">
+              <div class="brand-field">
+                <input type="url" class="brand-input" id="instaLink" name="instaLink" placeholder=" ">
+                <label for="instaLink">Instagram Profile Link</label>
+              </div>
+            </div>
+
+            <div class="col-md-3 mt-4">
+              <div class="brand-field">
+                <input type="url" class="brand-input" id="fbLink" name="fbLink" placeholder=" ">
+                <label for="fbLink">Facebook Profile Link</label>
+              </div>
+            </div>
+
+            <div class="col-md-3 mt-4">
+              <div class="brand-field">
+                <input type="url" class="brand-input" id="ytLink" name="ytLink" placeholder=" ">
+                <label for="ytLink">Youtube Profile Link</label>
+              </div>
+            </div>
+
+            <div class="col-md-3 mt-4">
+              <div class="brand-field">
+                <input type="url" class="brand-input" id="tiktokLink" name="tiktokLink" placeholder=" ">
+                <label for="tiktokLink">TikTok Profile Link</label>
+              </div>
+            </div>
+
+
+
+            <!-- Content Category -->
+            <div class="col-md-6 mt-4">
+              <div class="brand-field">
+                <div class="brand-select-wrap">
+                  <select class="brand-select" id="category" name="category" required>
+                    <option value="" selected disabled></option>
+                    <option value="Digital / Reel Creator">Digital / Reel Creator</option>
+                    <option value="Tech & Gadgets">Tech & Gadgets</option>
+                    <option value="Health & Fitness">Health & Fitness</option>
+                    <option value="Fashion & Personal Style">Fashion & Personal Style</option>
+                    <option value="Food & Cooking">Food & Cooking</option>
+                    <option value="Lifestyle">Lifestyle</option>
+                    <option value="Travel & Adventure">Travel & Adventure</option>
+                    <option value="Business & Finance">Business & Finance</option>
+                    <option value="Artist">Artist</option>
+                    <option value="Beauty & Skincare">Beauty & Skincare</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <label for="category">Content Category *</label>
+              </div>
+            </div>
+
+            <!-- 11. Sub - Category -->
+            <div class="col-md-6 mt-4">
+              <div class="brand-field">
+                <input type="text" class="brand-input" id="subCategory" name="subCategory" placeholder=" ">
+                <label for="subCategory">Sub - Category</label>
+              </div>
+            </div>
+
+            <!-- 12. Portfolio / Media Kit Upload -->
+            <div class="col-12 mt-4">
+              <label for="portfolioUpload" class="form-label text-light">Portfolio / Media Kit Upload (optional)</label>
+              <p class="small text-light mb-2" style="opacity: 0.5;">Upload 1 supported file: PDF, document, or image.
+                Max 10 MB.</p>
+              <input class="form-control custom-input p-2" type="file" id="portfolioUpload" name="portfolioUpload"
+                accept=".pdf,.doc,.docx,image/*">
+            </div>
+
+            <!-- 13. Terms and Conditions -->
+            <div class="col-12 mt-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                <label class="form-check-label small" style="opacity: 0.9;" for="termsCheck">
+                  I have read and agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#termsModal"
+                    class="text-decoration-underline text-light fw-bold">Terms & Conditions</a> of the Media Pind
+                  Creator Network powered by Billiontags.
+                </label>
+              </div>
+            </div>
+
+          </div>
+          <div class="text-end mt-4 pt-4 d-flex justify-content-between align-items-center border-top"
+            style="border-color: rgba(255,255,255,0.1) !important;">
+            <button type="reset" class="btn btn-link text-light text-decoration-none">Clear form</button>
+            <button type="submit" id="submitBtn" class="btn btn-outline-light px-5 py-2 fw-bold"
+              style="border-color:#B63BD3; color:#B63BD3; border-radius: 30px; border-width: 2px;">Submit</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Modal -->
+  <div class="modal fade" id="successContactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm mx-auto" style="max-width: 90%; width: 410px;">
+      <div class="modal-content border-0 shadow-lg rounded-4 text-center p-3 p-md-4 overflow-hidden"
+        style="background: linear-gradient(135deg, #100628 0%, #1a0a3a 100%); border: 1px solid rgba(141, 92, 217, 0.3) !important; transform: scale(0.9);">
+
+        <!-- Decorative background glow -->
+        <div class="position-absolute translate-middle"
+          style="top:0; left:50%; width:200px; height:200px; background:radial-gradient(circle, rgba(141, 92, 217, 0.2) 0%, transparent 70%); filter:blur(40px); z-index:0;">
+        </div>
+
+        <div class="modal-body position-relative" style="z-index:1;">
+          <div class="mb-4 d-flex justify-content-center">
+            <div style="width: 100%; max-width: 240px;">
+              <img src="/creators/image 1761.png" alt="Media Pind"
+                style="width: 100%; height: auto; filter: brightness(1.2);">
+            </div>
+          </div>
+          <p class="mb-4 text-white-50" style="font-size: 0.95rem; line-height: 1.6;">
+            <span class="text-white fw-bold" style="font-size: 1.1rem; display: block; margin-bottom: 10px;">You're In!
+              🎉</span>
+            Thank you for joining the Media Pind Creator Network powered by Billiontags. Your profile has been
+            successfully submitted. <br><br>
+            Our partnerships team will review your details and be in touch as soon as a relevant brand campaign becomes
+            available for you.<br><br>
+            Feel free to reach out to us at <a href="mailto:partnerships@billiontags.com"
+              class="text-decoration-none fw-bold" style="color: #8d5cd9;">partnerships@billiontags.com</a><br><br>
+            We look forward to working with you.<br>
+            <span class="mt-2 d-inline-block text-white">Team Billiontags</span>
+          </p>
+          <button type="button" class="btn px-4 py-2 text-white border-0 rounded-pill"
+            style="background: linear-gradient(135deg, #ea0083, #8d5cd9);" data-bs-dismiss="modal">
+            Done
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Terms & Conditions Modal -->
+  <div class="modal fade" id="termsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+      <div class="modal-content border-0 shadow-lg rounded-4"
+        style="background-color: #100628; border: 1px solid #e0c6ff44 !important; color: #fff;">
+        <div class="modal-header border-bottom" style="border-color: rgba(255,255,255,0.1) !important;">
+          <h5 class="modal-title fw-bold">Creator Network — Terms & Conditions</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-start" style="font-size: 0.95rem; line-height: 1.6; opacity: 0.9;">
+          <p>By joining the Media Pind Creator Network powered by Billiontags you acknowledge and agree to the following
+            terms:</p>
+          <ol class="ps-3 mb-0">
+            <li class="mb-3"><strong>Network Membership:</strong> Acceptance into the Media Pind Creator Network does
+              not constitute a guarantee of campaign assignments. Campaigns are offered at Billiontags' sole discretion
+              based on brand requirements and audience alignment.</li>
+            <li class="mb-3"><strong>Campaign Confirmation:</strong> No campaign engagement is binding until both
+              parties have confirmed the campaign brief, deliverables, and fee in writing. Verbal or informal agreements
+              do not constitute confirmation.</li>
+            <li class="mb-3"><strong>Content Standards & Compliance:</strong> All content produced under a Billiontags
+              campaign must strictly adhere to the agreed campaign brief, applicable platform community guidelines, and
+              all relevant advertising standards and regulations in your jurisdiction.</li>
+            <li class="mb-3"><strong>Mandatory Disclosure:</strong> All brand partnership content must be clearly and
+              conspicuously disclosed as a paid partnership in accordance with platform policies and applicable
+              regulatory requirements, including ASA, FTC, or equivalent local guidelines.</li>
+            <li class="mb-3"><strong>Exclusivity:</strong> Unless explicitly stated in a specific campaign brief,
+              creators remain free to work with other brands and agencies. Where campaign-specific exclusivity is
+              required, this will be communicated in the relevant brief prior to confirmation.</li>
+            <li class="mb-3"><strong>Payment Terms:</strong> Agreed campaign fees will be processed within 30 days of
+              content approval and receipt of a completed post-campaign performance report. Late or incomplete
+              submissions may delay payment processing.</li>
+            <li class="mb-3"><strong>Confidentiality:</strong> All campaign briefs, brand identities, commercial terms,
+              and any proprietary information shared by Billiontags must be treated as strictly confidential and must
+              not be disclosed to any third party prior to campaign launch or at any time thereafter without prior
+              written consent.</li>
+            <li class="mb-3"><strong>Right to Decline:</strong> Creators retain the right to decline any campaign brief
+              at any time prior to written confirmation, without penalty or impact on network membership.</li>
+            <li class="mb-3"><strong>Removal from Network:</strong> Billiontags reserves the right to remove a creator
+              from the network at its discretion, including in instances of breach of these terms, platform violations,
+              misrepresentation of profile or audience data, or conduct deemed inconsistent with Billiontags' brand
+              standards and values.</li>
+            <li class="mb-3"><strong>Amendments:</strong> Billiontags reserves the right to update these terms at any
+              time. Creators will be notified of material changes with reasonable advance notice.</li>
+            <li class="mb-3"><strong>Governing Terms:</strong> These terms shall be governed by and construed in
+              accordance with applicable law. Any disputes shall be resolved in good faith in the first instance through
+              direct communication with the Billiontags partnerships team.</li>
+          </ol>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+
+    // Navbar Scroll Effect
+    window.addEventListener("scroll", () => {
+      const navbar = document.querySelector(".navbar");
+      if (navbar) {
+        if (window.scrollY > 40) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      }
+    });
+
+    // Toggling select value for label placement
+    document.querySelectorAll('.brand-select').forEach(select => {
+      // Check initial state (e.g., pre-selected or autofilled)
+      if (select.value) {
+        select.classList.add('has-value');
+      }
+
+      // Float on focus
+      select.addEventListener('focus', function () {
+        this.classList.add('has-value');
+      });
+
+      // Remove float on blur only if no value is selected
+      select.addEventListener('blur', function () {
+        if (!this.value) {
+          this.classList.remove('has-value');
+        }
+      });
+
+      // Update color and keep floating if value exists after change
+      select.addEventListener('change', function () {
+        if (this.value) {
+          this.classList.add('has-value');
+          this.classList.add('selected-value');
+        } else {
+          this.classList.remove('has-value');
+          this.classList.remove('selected-value');
+        }
+      });
+    });
+
+    // Form submission handler with AppScript integration
+    document.getElementById("influencerForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const submitBtn = document.getElementById("submitBtn");
+      const originalBtnText = submitBtn.innerText;
+
+      submitBtn.innerText = "Submitting...";
+      submitBtn.disabled = true;
+
+      const formData = new FormData(this);
+      const data = {};
+      formData.forEach((value, key) => {
+        if (key === 'platforms') {
+          if (!data[key]) data[key] = [];
+          data[key].push(value);
+        } else {
+          data[key] = value;
+        }
+      });
+
+      // Handle platforms array to string
+      if (data.platforms) data.platforms = data.platforms.join(', ');
+
+      const fileInput = document.getElementById('portfolioUpload');
+      if (fileInput.files.length > 0) {
+        const file = fileInput.files[0];
+        const reader = new FileReader();
+
+        reader.onload = async function () {
+          const base64String = reader.result.split(',')[1];
+          data.fileData = base64String;
+          data.fileName = file.name;
+          data.mimeType = file.type;
+          await sendToAppScript(data);
+        };
+        reader.readAsDataURL(file);
+      } else {
+        await sendToAppScript(data);
+      }
+
+      async function sendToAppScript(payload) {
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxt_yhShKkG9rWAMnTLI_el12l_ldBKomjMRLPKbPOBH_e3WM5Slf3efVV1zDBH-8nE/exec"; // USER: Replace this URL
+
+        try {
+          const response = await fetch(SCRIPT_URL, {
+            method: "POST",
+            body: JSON.stringify(payload),
+            mode: "no-cors" // Essential for Apps Script
+          });
+
+          var successModal = new bootstrap.Modal(document.getElementById('successContactModal'));
+          successModal.show();
+          document.getElementById("influencerForm").reset();
+          document.querySelectorAll('.brand-select').forEach(s => s.classList.remove('has-value'));
+        } catch (error) {
+          console.error("Error submitting form:", error);
+          alert("Submission failed. Please check the console or ensure your Script URL is correct.");
+        } finally {
+          submitBtn.innerText = originalBtnText;
+          submitBtn.disabled = false;
+        }
+      }
+    });
+  </script>
+
+  <script>
+    fetch("/header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+        updateNav(); // auto-injected
+
+        // âœ… Add active class to current page link
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          // Check if link matches current page
+          if (currentPath === href || currentPath.startsWith(href + '/')) {
+            link.classList.add('active');
+          }
+        });
+
+        // âœ… Set static navbar logo after header loads
+        const logo = document.getElementById("navbarLogo");
+        if (logo) {
+          logo.src = "https://billiontags-media.s3.ap-south-1.amazonaws.com/img/Logo/BILLION TAGS PNG.png";
+        }
+
+        // Initialize animated text after header is loaded
+        const words = ["SOLVED", "DECODED", "IMPACTED", "MONETIZED"];
+        let currentWordIndex = 0;
+        let currentCharIndex = 0;
+        const animatedText = document.getElementById('animated-text');
+
+        if (animatedText) {
+          function typeWord() {
+            animatedText.classList.remove('no-cursor'); // Show cursor while typing
+            if (currentCharIndex < words[currentWordIndex].length) {
+              animatedText.textContent += words[currentWordIndex].charAt(currentCharIndex);
+              currentCharIndex++;
+              setTimeout(typeWord, 150);
+            } else {
+              setTimeout(() => {
+                eraseWord();
+              }, 1000);
+            }
+          }
+
+          function eraseWord() {
+            if (currentCharIndex > 0) {
+              animatedText.textContent = words[currentWordIndex].substring(0, currentCharIndex - 1);
+              currentCharIndex--;
+              setTimeout(eraseWord, 100);
+            } else {
+              animatedText.classList.add('no-cursor'); // Hide cursor when word is erased
+              currentWordIndex = (currentWordIndex + 1) % words.length;
+              setTimeout(typeWord, 500);
+            }
+          }
+
+          typeWord();
+        }
+      });
+
+    fetch("/footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+        updateNav();
+        // Set the current year for the copyright notice
+        const yearElem = document.getElementById("currentYear");
+        if (yearElem) {
+          yearElem.textContent = new Date().getFullYear();
+        }
+      });
+  </script>
+
+</body>
+
+</html>
